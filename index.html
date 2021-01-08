@@ -1,16 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PureJS form</title>
-    <script src="index.js"></script>    
+    <!-- Title -->
+    <title>Grocery List</title>
+    <!-- CSS external file -->
+    <link rel="stylesheet" href="index.css"> 
+    <!-- meta characteristics -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width:device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+<!-- enabling bootstrap 4 -->	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>	
   </head>
   <body>
-    <form>
-      First Name: <input type="text" name="fname" placeholder="first name required" />
-      Last Name: <input type="text" name="lname" placeholder="first name required" />
-      email:       <input type="email" name="email" placeholder="first name required" />      
+    <!-- Heading -->
+    <header class="container container-fluid">
+      <h1 class="display-3 bg-info p-2 text-white font-weight-bold " id="title">Grocery List</h1>
+    </header>
+    
+    <!-- What r v craving this week :)? Add item -->
+    <form id="a_form" class="container container-fluid">
+      <header>
+        <h3 class="display-6">Add item</h3>
+        <h6 class="status-msg"></h6>     
+      </header>       
+      <input id="newItem" class="p-1" type="text" name="newItem" placeholder="What r v craving this week :)?">
+      <button type="submit" class="btn btn-primary">ADD TO LIST</button>      
     </form>
+        
+    <!-- My grocery list so far-->    
+    <div class="container container-fluid">
+      <h3 class="display-6">My list so far...</h3>
+    <!-- Grocery items added here-->
+      <ol id="list" class="pl-4"></ol>
+    </div>
+
+   <!-- <form class="container m-2">
+      Grocery Item: <input type="text" name="itemName" placeholder="first name required" /><br>
+      Store of purchase: <input type="text" name="quantity" placeholder="first name required" /><br>
+      Approx cost:       <input type="email" name="price" placeholder="first name required" /><br>
+    </form>-->
+    <script src="index.js"></script> 
   </body>
 </html>
